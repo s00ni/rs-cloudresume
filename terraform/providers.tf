@@ -11,7 +11,6 @@ terraform {
 # Config provider for environment
 provider "aws" {
   region = "us-east-1"
-  profile = "production-tf"
 }
 
 
