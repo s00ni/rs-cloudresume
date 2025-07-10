@@ -22,9 +22,6 @@ jobs:
           role-to-assume: arn:aws:iam::193544298890:role/GithubActionRole
           aws-region: us-east-1
 
-      - name: Confirm assumed IAM identity
-        run: aws sts get-caller-identity
-
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
