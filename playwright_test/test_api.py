@@ -20,7 +20,7 @@ async def run(playwright: Playwright):
 
     #check that any method aside from post and option returns a 403
     badResponse = await context.get("https://l7241ivbyh.execute-api.us-east-1.amazonaws.com/development/subpath")
-    badResponse.status == 403
+    assert badResponse.status == 403
 
 
 async def main():
