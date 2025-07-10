@@ -20,9 +20,9 @@ steps:
 
   - name: Configure AWS credentials via OIDC
     uses: aws-actions/configure-aws-credentials@v2
-      with: 
-        role-to-assume: arn:aws:iam::193544298890:role/GithubActionRole
-        aws-region: us-east-1
+    with: 
+      role-to-assume: arn:aws:iam::193544298890:role/GithubActionRole
+      aws-region: us-east-1
 
   - name: Setup Terraform
     uses: hashicorp/setup-terraform@v2
