@@ -23,7 +23,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v1.0.27
+        uses: actions/setup-node@v4
         with: 
           node-version: "22.14.0"
       
