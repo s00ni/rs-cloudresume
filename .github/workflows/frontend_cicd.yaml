@@ -28,16 +28,15 @@ jobs:
           node-version: "22.14.0"
       
       - name: Install dependencies
+        working-directory: cr_frontend
         run: npm install
 
       - name: Build React App
+        working-directory: cr_frontend
         run: npm run build
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync cr_frontend/dist/* s3://rsoon-resume.com --delete --dryrun
+        run: aws s3 sync cr_frontend/dist/ s3://rsoon-resume.com --delete
 
       - name: Invalidate CloudFront cache
-        run: |
-          aws cloudfront create-invalidation \
-          --distribution-id E3M8L6D1ISXELF
-          --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E3M8L6D1ISXELF --paths "/*"
