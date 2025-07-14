@@ -13,6 +13,7 @@ Prior to this challenge, I earned the AWS SAA-CO3 certification.
 ![img](crc_architecture.png)
 
 Technologies/Services used:
+- React for building the website
 - R53 for DNS
 - ACM for SSL/TLS cert
 - CloudFront for HTTPS + content delivery network
